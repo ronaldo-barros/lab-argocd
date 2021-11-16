@@ -23,5 +23,12 @@ spec:
         name: nginx
         ports:
         - containerPort: 80
-        resources: {}
-status: {}
+      tolerations:
+      - key: shipay.com.br/capacity-type
+        operator: Equal
+        value: spot
+        effect: NoSchedule
+      - key: shipay.com.br/capacity-type
+        operator: Equal
+        value: ondemand
+        effect: NoSchedule
