@@ -15,8 +15,7 @@ spec:
     server: 'https://kubernetes.default.svc'
     namespace: lab
   syncPolicy:
-    automated:
-      selfHeal: true
+    automated: {}
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
